@@ -1,7 +1,7 @@
 " File: gtags-cscope.vim
 " Author: Tama Communications Corporation
-" Version: 0.4
-" Last Modified: January 16, 2011
+" Version: 0.4.1
+" Last Modified: September 10, 2014
 "
 " Copyright and license
 " ---------------------
@@ -99,7 +99,9 @@ if exists("loaded_gtags_cscope")
     finish
 endif
 if !has("cscope")
-    call Error('This vim does not include cscope support.')
+    echohl WarningMsg |
+           \ echomsg 'Gtags-cscope: ' . 'This vim does not include cscope support.' |
+           \ echohl None
     finish
 endif
 "
